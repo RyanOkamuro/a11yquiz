@@ -98,7 +98,7 @@ let answersCorrectCount = 0;
 
 function generateQuestion() {
   return `
-  <main id="main_Quiz" role="main">
+  <section id="question_Quiz" role="region">
   <h3 class="multiple_Questions">${STORE[questionNumber].question_Name}</h3>
   <form>
     <fieldset name="quizForm">
@@ -131,7 +131,7 @@ function generateQuestion() {
         <p class="scoreCount">Score: ${answersCorrectCount}</p>
       </div>
   </form>
-  </main>
+  </section>
   `;
 }
 
@@ -150,7 +150,7 @@ function checkAnswer() {
       let selectedChoice=$('input[name=answerOption]:checked').val();
       let correctAnswer=`${STORE[questionNumber].answer}`;
       if (selectedChoice === correctAnswer) {
-        $('#main_Quiz').hide();
+        $('#question_Quiz').hide();
         $('#newPageLoader').html(correctAnswerPage());
         answersCorrectCount++;
       }
@@ -163,9 +163,9 @@ function checkAnswer() {
 //function to display correct answer page
 function correctAnswerPage() {
   return `
-  <main class="correctPage" role="main">
+  <section class="correctPage" role="region">
       <h4>CORRECT!</h4>
-  </main>
+  </section>
   <button type="button" class="js-next-button">Next</button>
   `;
 }     
@@ -173,9 +173,9 @@ function correctAnswerPage() {
 //function to display correct answer page
 function incorrectAnswerPage() {
   return `
-  <main class="incorrectPage" role="main">
+  <section class="incorrectPage" role="region">
       <h5>WRONG, the correct answer:<span class="wrongAnswer">${STORE[questionNumber].answer}</span></h5>
-  </main>
+  </section>
   <button type="button" class="js-next-button">Next</button>
   `;
 }     
@@ -201,9 +201,9 @@ function handleNextButton() {
 //function to display final page with results
 function resultsPage() {
   return `
-  <main class="finalScore" role= "main">
+  <section class="finalScore" role= "region">
     <h6>Final Score: <span class=finalCount> ${answersCorrectCount}/10</div></h6>
-  </main>
+  </section>
   <button type="button" class="js-restart-button">Restart</button>
   `;
 }
