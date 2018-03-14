@@ -163,9 +163,9 @@ function checkAnswer() {
 //function to display correct answer page
 function correctAnswerPage() {
   return `
-  <section class="correctPage" role="region">
+  <main class="correctPage" role="main">
       <h4>CORRECT!</h4>
-  </section>
+  </main>
   <button type="button" class="js-next-button">Next</button>
   `;
 }     
@@ -173,9 +173,9 @@ function correctAnswerPage() {
 //function to display correct answer page
 function incorrectAnswerPage() {
   return `
-  <section class="incorrectPage" role="region">
+  <main class="incorrectPage" role="main">
       <h5>WRONG, the correct answer:<span class="wrongAnswer">${STORE[questionNumber].answer}</span></h5>
-  </section>
+  </main>
   <button type="button" class="js-next-button">Next</button>
   `;
 }     
@@ -201,9 +201,9 @@ function handleNextButton() {
 //function to display final page with results
 function resultsPage() {
   return `
-  <section class="finalScore" role= "region">
+  <main class="finalScore" role= "main">
     <h6>Final Score: <span class=finalCount> ${answersCorrectCount}/10</div></h6>
-  </section>
+  </main>
   <button type="button" class="js-restart-button">Restart</button>
   `;
 }

@@ -61,8 +61,8 @@ button[type="button"] {
   font-weight: bold;
   padding: 2px;
   width: 80px;
-  background-color: #71b300;
-  color: #e6e6e6;
+  background-color: #84D600;
+  color: #1F1F1F;
   border: 0.5px;
   border-radius: 3px;
   margin-bottom: 10px;
@@ -72,7 +72,7 @@ button[type="submit"]:hover,
 button[type="submit"]:focus,
 button[type="button"]:hover,
 button[type="button"]:focus {
-  background-color: #81cc00;
+  background-color: #A4FF14;
   -webkit-transition: background 0.1s;
   -moz-transition: background 0.1s;
   -o-transition: background 0.1s;
